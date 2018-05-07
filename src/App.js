@@ -27,7 +27,11 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <Location city={config.city} region={config.region} country={config.country} />
+        <Location
+          city={config.city}
+          region={config.region}
+          country={config.country}
+        />
         <SelectedDay />
         <Forecast onDayChanged={this.setSelectedDay} />
       </div>
@@ -36,9 +40,9 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-	return {
-		request: getRequest(state),
-	};
+  return {
+    request: getRequest(state),
+  };
 }
 
 function mapDispatchToProps(dispatch) {

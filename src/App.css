@@ -1,9 +1,8 @@
 .App {
-  text-align: center;
-
   width: 100%;
   max-width: 800px;
   margin: auto;
+  padding: 50px;
 
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5569ba+0,54d1ab+100 */
   background: #5569ba; /* Old browsers */

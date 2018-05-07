@@ -1,0 +1,16 @@
+.selectedDay{
+	display: flex;
+}
+
+.selectedDay > div {
+	width: 50%;
+}
+
+
+.selectedDay .seaForecast {
+	display: flex;
+}
+
+.selectedDay .seaForecast .label {
+	flex-grow: 1;
+}

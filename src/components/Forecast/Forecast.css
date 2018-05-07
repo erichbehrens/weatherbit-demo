@@ -1,0 +1,28 @@
+
+.forecast {
+	list-style: none;
+}
+
+.forecast:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.forecast > li {
+	float: left;
+	width: calc(100% / 7);
+	text-align: center;
+	border-right: 1px solid white;
+	overflow: hidden;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.forecast > li:last-child {
+	border-right: unset;
+}
+
+.forecast .icon {
+	width: 100%;
+}
