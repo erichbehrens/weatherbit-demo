@@ -6,7 +6,7 @@ function getDayName(date) {
 	return new Date(date).toLocaleString('en', {weekday: 'long'} );
 }
 
-function Forecast({ forecast }) {
+function Forecast({ forecast, onDayChanged }) {
 	if(!forecast) {
 		return null;
 	}
@@ -14,7 +14,7 @@ function Forecast({ forecast }) {
 		<ul>
 			{forecast.map((day) => {
 				return (
-					<li key={day.datetime}>
+					<li key={day.datetime} onClick={() => onDayChanged(day.datetime)}>
 						{getDayName(day.datetime)}<br />
 						<img src={`https://www.weatherbit.io/static/img/icons/${day.icon}.png`} /><br />
 						{day.temp} °C<br />

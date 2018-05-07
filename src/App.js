@@ -6,13 +6,15 @@ import config from './config';
 import SelectedDay from './components/SelectedDay';
 import Forecast from './components/Forecast';
 import Loader from './components/Loader';
-import { getWeatherAction } from './store/weather/actions';
+import { getWeatherAction, setSelectedDayAction } from './store/weather/actions';
 import { getRequest } from './store/weather/selectors';
 
 class App extends Component {
   componentDidMount() {
     this.props.getWeather();
   }
+
+  setSelectedDay = day => this.props.setSelectedDay(day);
 
   render() {
     const { request } = this.props;
@@ -26,6 +28,7 @@ class App extends Component {
     return (
       <div className="App">
         <Location city={config.city} region={config.region} country={config.country} />
+        <SelectedDay />
         <Forecast onDayChanged={this.setSelectedDay} />
       </div>
     );
@@ -41,6 +44,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     getWeather: () => dispatch(getWeatherAction()),
+    setSelectedDay: day => dispatch(setSelectedDayAction(day))
   };
 }
 

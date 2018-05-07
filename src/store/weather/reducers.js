@@ -1,4 +1,4 @@
-import { FETCHING_STARTED, FETCHING_SUCCEEDED, FETCHING_FAILED } from './constants';
+import { FETCHING_STARTED, FETCHING_SUCCEEDED, FETCHING_FAILED, SET_SELECTED_DAY } from './constants';
 
 const initialState = {
 	data: undefined,
@@ -18,6 +18,14 @@ function reducer(state = initialState, action) {
 				...state,
 				request: { isFetching: false },
 				data,
+				selectedDay: data[0].datetime,
+			};
+		}
+		case SET_SELECTED_DAY: {
+			const { selectedDay } = action.payload;
+			return {
+				...state,
+				selectedDay,
 			};
 		}
 		case FETCHING_FAILED:

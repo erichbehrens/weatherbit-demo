@@ -23,11 +23,11 @@ function getWeatherSucceeded(data) {
 	};
 }
 
-export function setSelectedDayAction(day) {
+export function setSelectedDayAction(selectedDay) {
 	return {
 		type: SET_SELECTED_DAY,
 		payload: {
-			day,
+			selectedDay,
 		},
 	};
 }
