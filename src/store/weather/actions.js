@@ -3,7 +3,7 @@ import 'whatwg-fetch';
 import config from '../../config';
 
 async function fetchWeather() {
-	const response = await fetch(`https://api.weatherbit.io/v2.0/forecast/daily?days=5&city=${config.city}&country=${config.country}&key=${config.apiKey}`);
+	const response = await fetch(`https://api.weatherbit.io/v2.0/forecast/daily?days=${config.days}&city=${config.city}&country=${config.country}&key=${config.apiKey}`);
 	const data = await response.json();
 	return data.data;
 }

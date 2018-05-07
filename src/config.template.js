@@ -3,4 +3,5 @@ export default {
 	region: 'West Midlands',
 	country: 'UK',
 	apiKey: '',
+	days: 7,
 }
