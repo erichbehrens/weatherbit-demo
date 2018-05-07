@@ -1,0 +1,3 @@
+export const FETCHING_STARTED = 'weather/FETCHING_STARTED';
+export const FETCHING_SUCCEEDED = 'weather/FETCHING_SUCCEEDED';
+export const FETCHING_FAILED = 'weather/FETCHING_FAILED';
