@@ -5,6 +5,16 @@ const initialState = {
 	request: { isFetching: false },
 };
 
+function getMainData(day) {
+	return ({
+		datetime: day.datetime,
+		temp: day.temp,
+		tempF: (day.temp * 9 / 5 + 32).toFixed(1),
+		icon: day.weather.icon,
+		description: day.weather.description,
+	});
+}
+
 function reducer(state = initialState, action) {
 	switch (action.type) {
 		case FETCHING_STARTED:
@@ -14,10 +24,25 @@ function reducer(state = initialState, action) {
 			};
 		case FETCHING_SUCCEEDED: {
 			const { data } = action.payload;
+			const normalizedData = data.map(dayForecast => ({
+				mainData: getMainData(dayForecast),
+				seaForecast: {
+					windSpeed: dayForecast.wind_spd.toFixed(1),
+					windGuts: dayForecast.wind_gust_spd.toFixed(1),
+					windDirection: dayForecast.wind_cdir,
+					/*
+					wave,
+					wavePeriod,
+					waveDirection,
+					temp,
+					*/
+					cloudCover: dayForecast.clouds,
+				}
+			}))
 			return {
 				...state,
 				request: { isFetching: false },
-				data,
+				data: normalizedData,
 				selectedDay: data[0].datetime,
 			};
 		}

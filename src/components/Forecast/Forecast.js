@@ -22,6 +22,7 @@ function Forecast({ forecast, onDayChanged }) {
 							<img
 								className="icon"
 								src={`https://www.weatherbit.io/static/img/icons/${day.icon}.png`}
+								alt={day.description}
 							/><br />
 							{day.temp} °C<br />
 							{day.tempF} °F<br />
