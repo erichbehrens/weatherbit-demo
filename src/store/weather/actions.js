@@ -5,7 +5,7 @@ import config from '../../config';
 async function fetchWeather() {
 	const response = await fetch(`https://api.weatherbit.io/v2.0/forecast/daily?days=5&city=${config.city}&country=${config.country}&key=${config.apiKey}`);
 	const data = await response.json();
-	return data;
+	return data.data;
 }
 
 function getWeatherStarted() {
@@ -19,6 +19,15 @@ function getWeatherSucceeded(data) {
 		type: FETCHING_SUCCEEDED,
 		payload: {
 			data,
+		},
+	};
+}
+
+export function setSelectedDayAction(day) {
+	return {
+		type: SET_SELECTED_DAY,
+		payload: {
+			day,
 		},
 	};
 }
