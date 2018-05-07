@@ -1,10 +1,11 @@
 import React from 'react';
+import './Location.css';
 
 function Location({ city, region, country }) {
 	return (
-		<div>
-			<h1>{city}</h1>
-			<h2>{region}, {country}</h2>
+		<div className="location">
+			<h1 className="city">{city}</h1>
+			<h2 className="region">{region}, {country}</h2>
 		</div>
 	);
 }

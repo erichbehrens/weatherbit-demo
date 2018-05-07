@@ -1,6 +1,7 @@
 
 .forecast {
 	list-style: none;
+	text-transform: uppercase;
 }
 
 .forecast:after{

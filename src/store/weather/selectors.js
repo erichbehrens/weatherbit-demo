@@ -30,6 +30,7 @@ export const getDayForecast = createSelector(
 		const dayForecast = weather.find(day => day.datetime === selectedDay);
 		return ({
 			...getMainData(dayForecast),
+			description: dayForecast.weather.description,
 			seaForecast: {
 				windSpeed: dayForecast.wind_spd.toFixed(1),
 				windGuts: dayForecast.wind_gust_spd.toFixed(1),

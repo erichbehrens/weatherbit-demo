@@ -1,16 +1,40 @@
 .selectedDay{
 	display: flex;
+	text-transform: uppercase;
 }
 
 .selectedDay > div {
 	width: 50%;
 }
 
+.selectedDay .localForecast {
+	display: flex;
+	text-align: center;
+}
+
+.selectedDay .localForecast > div {
+	width: 50%;
+}
+
+.selectedDay .localForecast .detail {
+	line-height: 20pt;
+}
+
+.selectedDay .localForecast .detail .dayName {
+	font-size: 16pt;
+}
+
+.selectedDay .localForecast .detail .description {
+	font-size: 10pt;
+}
 
 .selectedDay .seaForecast {
 	display: flex;
+	font-size: 10pt;
+	line-height: 20pt;
 }
 
 .selectedDay .seaForecast .label {
 	flex-grow: 1;
+	color: #cccccc;
 }

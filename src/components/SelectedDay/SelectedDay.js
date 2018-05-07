@@ -15,10 +15,17 @@ function SelectedDay({ forecast }) {
 	return (
 		<div className="selectedDay">
 			<Panel title="Local weather report">
-				{getDayName(forecast.datetime)}<br />
-				<img src={`https://www.weatherbit.io/static/img/icons/${forecast.icon}.png`} /><br />
-				{forecast.temp} °C<br />
-				{forecast.tempF} °F<br />
+				<div className="localForecast">
+					<div className="icon">
+						<img src={`https://www.weatherbit.io/static/img/icons/${forecast.icon}.png`} />
+					</div>
+					<div className="detail">
+						<div className="dayName">{getDayName(forecast.datetime)}</div>
+						<div className="description">{forecast.description}</div>
+						<div>{forecast.temp} °C</div>
+						<div>{forecast.tempF} °F</div>
+					</div>
+				</div>
 			</Panel>
 			<Panel title="Sea forecast report">
 				<div className="seaForecast">
