@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5569ba+0,54d1ab+100 */
+  background: #5569ba; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #5569ba 0%, #54d1ab 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #5569ba 0%, #54d1ab 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #5569ba 0%, #54d1ab 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5569ba', endColorstr='#54d1ab', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+}
