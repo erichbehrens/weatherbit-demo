@@ -1,8 +1,10 @@
-.location .city {
-	font-size: 24pt;
-}
+.location {
+  & .city {
+    font-size: 24pt;
+  }
 
-.location .region {
-	font-size: 12pt;
-	color: #cccccc;
+  & .region {
+    font-size: 12pt;
+    color: #cccccc;
+  }
 }

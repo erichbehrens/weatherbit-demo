@@ -1,40 +1,40 @@
-.selectedDay{
-	display: flex;
-	text-transform: uppercase;
-}
+.selectedDay {
+  display: flex;
+  text-transform: uppercase;
 
-.selectedDay > div {
-	width: 50%;
-}
+  & > div {
+    width: 50%;
+  }
 
-.selectedDay .localForecast {
-	display: flex;
-	text-align: center;
-}
+  & .localForecast {
+    display: flex;
+    text-align: center;
 
-.selectedDay .localForecast > div {
-	width: 50%;
-}
+    & > div {
+      width: 50%;
+    }
 
-.selectedDay .localForecast .detail {
-	line-height: 20pt;
-}
+    & .detail {
+      line-height: 20pt;
 
-.selectedDay .localForecast .detail .dayName {
-	font-size: 16pt;
-}
+      & .dayName {
+        font-size: 16pt;
+      }
 
-.selectedDay .localForecast .detail .description {
-	font-size: 10pt;
-}
+      & .description {
+        font-size: 10pt;
+      }
+    }
+  }
 
-.selectedDay .seaForecast .row {
-	display: flex;
-	font-size: 10pt;
-	line-height: 20pt;
-}
+  & .seaForecast .row {
+    display: flex;
+    font-size: 10pt;
+    line-height: 20pt;
 
-.selectedDay .seaForecast .row .label {
-	flex-grow: 1;
-	color: #cccccc;
+    & .label {
+      flex-grow: 1;
+      color: #cccccc;
+    }
+  }
 }
