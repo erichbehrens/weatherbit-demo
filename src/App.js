@@ -29,7 +29,6 @@ class App extends Component {
       <div className="App">
         <Location
           city={config.city}
-          region={config.region}
           country={config.country}
         />
         <SelectedDay />
