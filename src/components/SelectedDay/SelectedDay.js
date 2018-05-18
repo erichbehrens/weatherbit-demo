@@ -17,18 +17,22 @@ function SelectedDay({ forecast }) {
 	const { mainData, seaForecast } = forecast;
 	return (
 		<div className="selectedDay">
-			<Panel title="Local weather report">
-				<LocalForecast
-					icon={mainData.icon}
-					datetime={mainData.datetime}
-					description={mainData.description}
-					temp={mainData.temp}
-					tempF={mainData.tempF}
-				/>
-			</Panel>
-			<Panel title="Sea forecast report">
-				<SeaForecast seaForecast={seaForecast} />
-			</Panel>
+			<div>
+				<Panel title="Local weather report">
+					<LocalForecast
+						icon={mainData.icon}
+						datetime={mainData.datetime}
+						description={mainData.description}
+						temp={mainData.temp}
+						tempF={mainData.tempF}
+					/>
+				</Panel>
+			</div>
+			<div>
+				<Panel title="Sea forecast report">
+					<SeaForecast seaForecast={seaForecast} />
+				</Panel>
+			</div>
 		</div>
 	);
 }

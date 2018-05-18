@@ -1,9 +1,14 @@
 .selectedDay {
   display: flex;
   text-transform: uppercase;
+  flex-wrap: wrap;
 
   & > div {
     width: 50%;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
   }
 
   & .localForecast {

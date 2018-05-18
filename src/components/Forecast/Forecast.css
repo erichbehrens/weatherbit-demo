@@ -20,6 +20,23 @@
     &:last-child {
       border-right: unset;
     }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      border-right: unset;
+      border-bottom: 1px solid white;
+
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      &:last-child {
+        border-bottom: unset;
+      }
+
+      & .icon{
+        width: 48px;
+      }
+    }
   }
 
   & .icon {
